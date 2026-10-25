@@ -41,8 +41,14 @@ Or as a plugin:
 /plugin install instagram-agent
 ```
 
+Working inside the clone itself? Nothing to install. `.claude/skills/` in this
+repo is a set of symlinks to `skills/`, so Claude Code opened here loads all
+thirteen. On Windows, git checks symlinks out as plain text files unless
+`core.symlinks` is on, so use the copy above instead.
+
 Project-local instead of global: copy the same folders into your repo's
-`.claude/skills/`. No Claude Code at all? Paste any single `SKILL.md` at the top
+`.claude/skills/`. Copy them from `skills/`, not from this repo's
+`.claude/skills/`, which only holds links. No Claude Code at all? Paste any single `SKILL.md` at the top
 of a chat and it runs as a mode. You lose the five Python tools, which is most
 of the point of `/ig-reel` and `/ig-human`, but the rest works.
 
